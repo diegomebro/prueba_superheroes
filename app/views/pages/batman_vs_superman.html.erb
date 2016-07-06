@@ -1,8 +1,36 @@
 <div class="row">
   <div class="col-md-6 vs_batman">
-  	<a href="<%= pages_batman_path %>" class="btn btn-primary btn-lg active bt_shero" role="button">Batman</a>
+  	<div class="contenido_form">
+	  	<a href="<%= pages_batman_path %>" class="btn btn-primary btn-lg active bt_shero" role="button">Batman</a>
+		<form action="<%= pages_saver_vote_path %>" method="post">
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+			<div class="form-group">
+				<label for="txt_heroe">Heroe</label>
+				<input name="txt_heroe" type="text" class="form-control" id="txt_nombre" placeholder="Batman">
+			</div>
+			<div class="form-group">
+				<label for="txt_mail">Email</label>
+				<input name="txt_mail" type="email" class="form-control" id="txt_mail" placeholder="juanito@hola.cl">
+			</div>
+			<button type="submit" class="btn btn-default">Votar</button>
+		</form>
+	</div>
   </div>
   <div class="col-md-6 vs_superman">
-  	<a href="<%= pages_superman_path %>" class="btn btn-primary btn-lg active bt_shero" role="button">Superman</a>
+  	<div class="contenido_form">
+	  	<a href="<%= pages_saver_vote_path %>" class="btn btn-primary btn-lg active bt_shero" role="button">Superman</a>
+		<form action="<%= pages_superman_path %>" method="post">
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+			<div class="form-group">
+				<label for="txt_heroe">Heroe</label>
+				<input name="txt_heroe" type="text" class="form-control" id="txt_nombre" placeholder="Superman">
+			</div>
+			<div class="form-group">
+				<label for="txt_mail">Email</label>
+				<input name="txt_mail" type="email" class="form-control" id="txt_mail" placeholder="juanito@hola.cl">
+			</div>
+			<button type="submit" class="btn btn-default">Votar</button>
+		</form>
+	</div>
   </div>
 </div>
